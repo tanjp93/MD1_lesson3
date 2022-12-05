@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--chuyen doi so-->
+<select name="cars" id="cars" onchange="getData(event)">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+<script>
+  function getData (event){
+    // chuyen tham so
+      console.log(event.target.value)
+  }
+</script>
+</body>
+</html>

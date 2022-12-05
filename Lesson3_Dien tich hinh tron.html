@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S_hinhtron</title>
+</head>
+<body>
+<table border="1px" style="border-collapse: collapse">
+  <caption style="caption-side: top">Dien tich hinh tron</caption>
+  <tr>
+    <td>ban kinh</td>
+    <td>dien tich</td>
+  </tr>
+  <tr>
+    <td><input id="bankinh" type="text"></td>
+    <td id="dientich"></td>
+  </tr>
+  <td><button onclick="Show_KQ()">result</button></td>
+  <td><button type="reset">reset</button></td>
+
+</table>
+<script>
+  function Show_KQ() {
+    let r=+document.getElementById("bankinh").value;
+    let s=3.14*(r*r);
+    document.getElementById("dientich").innerHTML =(""+s);
+    console.log(">>>>>>>"+s)
+  }
+</script>
+</body>
+</html>

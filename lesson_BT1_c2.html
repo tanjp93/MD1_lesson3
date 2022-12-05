@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT1_c2</title>
+</head>
+<body>
+<caption>
+    <h1 >Ket qua trung binh</h1>
+    <table border="1" style="border-collapse: collapse">
+        <tr>
+            <th>STT</th>
+            <th>Mon Hoc</th>
+            <th>Diem so</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td >TOAN </td>
+            <td><input id="toan" type="text" value=""></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ly </td>
+            <td><input id="ly" type="text" value=""></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Hoa </td>
+            <td><input id="hoa" type="text" value=""></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>
+                Diem trung binh
+            </td>
+            <td id="result" ></td>
+        </tr>
+        <tr>
+            <td colspan="3"><button id="" onclick="Show_KQ()"> Diem trung binh </button></td>
+        </tr>
+        <script>
+            function Show_KQ(){
+                let toan=+document.getElementById("toan").value;
+                let ly=+document.getElementById("ly").value;
+                let hoa=+document.getElementById("hoa").value;
+                let avg=(toan+ly+hoa)/3;
+                document.getElementById('result').innerHTML=("")+avg;
+                console.log(avg);
+            }
+        </script>
+    </table>
+</caption>
+
+</body>
+</html>
