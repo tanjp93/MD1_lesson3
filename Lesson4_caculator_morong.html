@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Caculor</title>
+</head>
+<body>
+<div>
+    <table border="1" style="width: 500px">
+        <tr>
+            <td style="text-align: center" colspan="4"><input style="width: 450px" id="calculator" type="text"></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputCalculator('1')">1</button></td>
+            <td><button onclick="inputCalculator('2')">2</button></td>
+            <td><button onclick="inputCalculator('3')">3</button></td>
+            <td><button onclick="inputCalculator('+')">+</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="inputCalculator('4')">4</button></td>
+            <td><button onclick="inputCalculator('5')">5</button></td>
+            <td><button onclick="inputCalculator('6')">6</button></td>
+            <td><button onclick="inputCalculator('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputCalculator('7')">7</button></td>
+            <td><button onclick="inputCalculator('8')">8</button></td>
+            <td><button onclick="inputCalculator('9')">9</button></td>
+            <td><button onclick="inputCalculator('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="result()">=</button></td>
+            <td><button onclick="clearCalculator()">C</button></td>
+            <td><button onclick="inputCalculator('0')">0</button></td>
+            <td><button onclick="inputCalculator('/')">/</button></td>
+        </tr>
+        <tr>
+            <td ><button onclick="sqrt()">&radic;</button></td>
+            <td><button onclick="cubeOf()"><span style='font-size:15px;'>&#8731;</span></button></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function inputCalculator(input) {
+        document.getElementById('calculator').value+=input;
+        console.log("number>>>>>",document.getElementById('calculator').value);
+    }
+    function result() {
+        let numberInput= document.getElementById('calculator').value;
+        let result=eval(numberInput);
+        document.getElementById('calculator').value=("result>>>",result);
+        console.log("result>>>",result);
+    }
+    function clearCalculator() {
+        document.getElementById('calculator').value=('')
+    }
+    function sqrt() {
+        let numberInput=document.getElementById('calculator').value;
+        let result1=Math.sqrt(numberInput,2);
+        document.getElementById('calculator').value=('result1>>>>',result1)
+    }
+    function cubeOf() {
+        let numberInput=document.getElementById('calculator').value;
+        let result1=Math.cbrt(numberInput,3);
+        document.getElementById('calculator').value=('result1>>>',result1)
+    }
+</script>
+</body>
+</html>
