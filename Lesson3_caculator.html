@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<table border="1px" style="border-collapse: collapse">
+
+  <tr>
+    <td><button onclick="addition()">Addition(+)</button></td>
+    <td><button onclick="subtraction()">Subtraction(-)</button></td>
+    <td><button onclick="multiplication()">Multiplication(X)</button></td>
+    <td><button onclick="division()">Division(/)</button></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input id="number1" type="text" onchange="getA(event)"></td>
+    <td colspan="2"><input id="number2" type="text" onchange="getB(event)"></td>
+  </tr>
+</table>
+<!--<p> <button onclick="resetData()">Reset</button> </p>-->
+<h1 id="kq"></h1>
+<script>
+  let soA = 0;
+  let soB = 0;
+function getA(event){
+  soA = event.target.value
+}
+  function getB(event){
+    soB = event.target.value
+  }
+  function addition() {
+    let result1=parseInt(soA)+parseInt(soB)
+    document.getElementById("kq").innerHTML=("kq>>>>>>", result1);
+  }
+  function subtraction() {
+  let result2=parseInt(soA)-parseInt(soB)
+    document.getElementById("kq").innerHTML=("kq>>>>",result2);
+  }
+  function multiplication() {
+    let result3=parseInt(soA)*parseInt(soB)
+    document.getElementById("kq").innerHTML=("kq>>>>",result3);
+  }
+  function division() {
+    let result4=parseInt(soA)/parseInt(soB)
+    document.getElementById("kq").innerHTML=("kq>>>>",result4);
+  }
+</script>
+</body>
+</html>
